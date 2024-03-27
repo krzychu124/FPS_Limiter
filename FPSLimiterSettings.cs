@@ -34,7 +34,7 @@ namespace FPS_Limiter
         [SettingsUISection(MainSection)]
         public bool PausedLimitEnabled { get; set; }
         
-        [SettingsUISlider(min = 5f, max = 200f, step = 1f, unit = "integer")]
+        [SettingsUISlider(min = 5f, max = 240f, step = 1f, unit = "integer")]
         [SettingsUISection(MainSection)]
         [SettingsUIDisableByCondition(typeof(FPSLimiterSettings), nameof(IsPausedLimitDisabled))]
         public int Paused { get; set; } 
