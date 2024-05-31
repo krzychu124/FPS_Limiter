@@ -5,16 +5,17 @@
         <TargetFramework>net472</TargetFramework>
         <Configurations>Debug;Release</Configurations>
 
-        <!--The folder where Cities2.exe is located. Set it only if the game is not installed in the default location, otherwise keep it empty-->
-        <CustomInstallationPath>D:\SteamLibrary\steamapps\common\Cities Skylines II</CustomInstallationPath>
-
         <!--The file where mod information which is required for publishing mod on PDX mods are stored-->
         <PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
-        <Version>0.1.0</Version>
+        <Version>0.1.1</Version>
         <Authors>Krzychu124</Authors>
         <Description>Limit in-game FPS depending on the game state</Description>
-        <AssemblyVersion>0.1</AssemblyVersion>
-        <FileVersion>0.1</FileVersion>
+        <AssemblyVersion>0.1.1</AssemblyVersion>
+        <FileVersion>0.1.1</FileVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DebugSymbols>true</DebugSymbols>
     </PropertyGroup>
 
     <!--Imports must be after PropertyGroup block-->
@@ -73,7 +74,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="..\Keys.props" Link="Properties\Keys.props"/>
         <None Include="$(ModPropsFile)" Link="Properties\Mod.props"/>
         <None Include="$(ModTargetsFile)" Link="Properties\Mod.targets"/>
         <None Update="i18n.csv">

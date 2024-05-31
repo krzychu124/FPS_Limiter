@@ -15,7 +15,7 @@ namespace FPS_Limiter
         [SettingsUISection(MainSection)]
         public bool MenuLimitEnabled { get; set; }
         
-        [SettingsUISlider(min = 5f, max = 200f, step = 1f, unit = "integer")]
+        [SettingsUISlider(min = 5f, max = 240f, step = 1f, unit = "integer")]
         [SettingsUISection(MainSection)]
         [SettingsUIDisableByCondition(typeof(FPSLimiterSettings), nameof(IsMenuLimitDisabled))]
         public int Menu { get; set; } 
@@ -24,7 +24,7 @@ namespace FPS_Limiter
         [SettingsUISection(MainSection)]
         public bool InGameLimitEnabled { get; set; }
         
-        [SettingsUISlider(min = 5f, max = 200f, step = 1f, unit = "integer")]
+        [SettingsUISlider(min = 5f, max = 240f, step = 1f, unit = "integer")]
         [SettingsUISection(MainSection)]
         [SettingsUIDisableByCondition(typeof(FPSLimiterSettings), nameof(IsInGameLimitDisabled))]
         public int InGame { get; set; }
