@@ -24,8 +24,11 @@ namespace FPS_Limiter
         }
 
         public void OnDispose() {
-            _fpsLimiterSystem.Enabled = false;
-            _fpsLimiterSystem = null;
+            if (_fpsLimiterSystem != null)
+            {
+                _fpsLimiterSystem.Enabled = false;
+                _fpsLimiterSystem = null;
+            }
         }
         
         private void LoadLocales()
